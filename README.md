@@ -1,8 +1,12 @@
-# React Homework 
+# Homework 80
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Реализуйте и экспортируйте по умолчанию компонент Progress, который принимает свойство percentage и рисует статический прогресс бар.
 
-Currently, two official plugins are available:
+Использование — ссылка
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Результат — ссылка
+
+Стиль width – вычисляется динамически
+Атрибут aria-valuenow – вычисляется динамически
+Подсказки
+Progress
