@@ -4,6 +4,9 @@ import PropTypes from 'prop-types';
 class Progress extends React.Component {
   render() {
     const { percentage } = this.props;
+    const barStyle = {
+      width: `${percentage}%`,
+    };
 
     return (
       <div className="progress">
@@ -14,7 +17,7 @@ class Progress extends React.Component {
           aria-valuemin="0"
           aria-valuemax="100"
           aria-label="progressbar"
-          style={{ width: `${percentage}%` }}
+          style={barStyle}
         ></div>
       </div>
     );
