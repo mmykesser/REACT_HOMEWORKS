@@ -1,11 +1,17 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import classNames from 'classnames';
 
 class Alert extends React.Component {
   render() {
     const { text, type } = this.props;
+
+    const alrtClass = classNames('alert', {
+      [`alert-${type}`]: type,
+    });
+
     return (
-      <div className={type} role="alert">
+      <div className={alrtClass} role="alert">
         {text}
       </div>
     );
@@ -13,7 +19,7 @@ class Alert extends React.Component {
 }
 
 Alert.defaultProps = {
-  type: 'alert alert-primary',
+  type: 'primary',
   text: 'Hi',
 };
 

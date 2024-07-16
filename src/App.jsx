@@ -3,7 +3,7 @@ import Alert from './components/Alert.jsx';
 function App() {
   return (
     <div className="App">
-      <Alert type={'alert alert-warning'} text={'what is love?'} />
+      <Alert type={'warning'} text={'what is love?'} />
     </div>
   );
 }
