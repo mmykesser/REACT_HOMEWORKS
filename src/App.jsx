@@ -1,7 +1,12 @@
-// import
+import Collapse from './components/Collapse.jsx';
 
 function App() {
-  return <div className="App"></div>;
+  const text = 'collapse me';
+  return (
+    <div className="App">
+      <Collapse text={text} opened={false} />
+    </div>
+  );
 }
 
 export default App;
