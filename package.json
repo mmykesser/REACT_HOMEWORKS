@@ -15,6 +15,7 @@
     "eslint-config-airbnb": "^19.0.4",
     "prop-types": "^15.8.1",
     "react": "^18.3.1",
+    "react-bootstrap": "^2.10.4",
     "react-dom": "^18.3.1",
     "styled-jsx": "^5.1.6"
   },
@@ -27,6 +28,7 @@
     "eslint-plugin-react-hooks": "^4.6.2",
     "eslint-plugin-react-refresh": "^0.4.7",
     "prettier": "^3.3.3",
+    "sass": "^1.77.8",
     "vite": "^5.3.1"
   }
 }
