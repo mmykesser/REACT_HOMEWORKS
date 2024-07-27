@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 class PostCatalog extends Component {
   render() {
-    const { data } = this.props;
+    const { data, itemTitle, itemBody } = this.props;
 
     return (
       <div className="posts">
@@ -14,8 +14,8 @@ class PostCatalog extends Component {
               data-post-id={item.id}
               key={item.id + '_' + index}
             >
-              <h3 className="postspost-title">{item.title}</h3>
-              <p className="postspost-description">{item.body}</p>
+              <h3 className="postspost-title">{item[itemTitle]}</h3>
+              <p className="postspost-description">{item[itemBody]}</p>
             </li>
           ))}
         </ul>
