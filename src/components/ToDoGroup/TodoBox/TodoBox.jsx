@@ -3,7 +3,7 @@ import { Col, Container, Row } from 'react-bootstrap';
 import TodoForm from '../TodoForm';
 import TodoItem from '../TodoItem';
 
-const TodoList = () => {
+const TodoBox = () => {
   const [data, setData] = useState([]);
 
   const uniqueIdCounter = useRef(0);
@@ -60,4 +60,4 @@ const TodoList = () => {
   );
 };
 
-export default TodoList;
+export default TodoBox;
