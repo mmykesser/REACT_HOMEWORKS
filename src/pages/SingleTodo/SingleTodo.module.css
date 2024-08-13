@@ -1,0 +1,13 @@
+.todoItem {
+    padding: 20px;
+}
+
+.statusSelect {
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.editButton, .deleteButton, .backButton {
+    margin-right: 10px;
+    margin-top: 15px;
+}
