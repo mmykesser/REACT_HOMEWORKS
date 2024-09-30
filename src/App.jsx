@@ -1,7 +1,8 @@
-// import
-
-function App() {
-  return <div className="App"></div>;
+import RouterConfig from './routerConfig/RouterConfig';
+export default function App() {
+  return (
+    <main>
+      <RouterConfig />
+    </main>
+  );
 }
-
-export default App;
