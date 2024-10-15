@@ -7,6 +7,7 @@ import MensClothingPage from '../pages/Categories/MensClothingPage';
 import WomensClothingPage from '../pages/Categories/WomensClothingPage';
 import CartPage from '../pages/CartPage/CartPage';
 import ProductPage from '../pages/ProductPage';
+import FavoritesPage from '../pages/FavoritesPage';
 
 const routerObjects = [
   {
@@ -48,6 +49,11 @@ const routerObjects = [
     id: 7,
     path: routeNames.singleProduct,
     element: ProductPage,
+  },
+  {
+    id: 8,
+    path: routeNames.favorites,
+    element: FavoritesPage,
   },
 ];
 

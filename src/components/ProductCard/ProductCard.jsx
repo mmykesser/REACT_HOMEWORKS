@@ -12,6 +12,7 @@ import { productCardStyle, buttonStyle } from './productCardStyle.js';
 import { useDispatch } from 'react-redux';
 import { addToCart } from '../../store/slices/shopCartSlices.js';
 import { useNavigate } from 'react-router-dom';
+import FavoriteButton from '../../UX/FavoriteButton';
 
 const ProductCard = ({ product }) => {
   const dispatch = useDispatch();
@@ -72,13 +73,16 @@ const ProductCard = ({ product }) => {
           <Typography variant="h6" component="div" sx={{ fontWeight: 'bold' }}>
             {product.price} zł
           </Typography>
-          <Button
-            variant="contained"
-            size="small"
-            startIcon={<AddShoppingCartIcon />}
-            onClick={handleAddToCart}
-            sx={buttonStyle}
-          ></Button>
+          <Box>
+            <FavoriteButton product={product} />
+            <Button
+              variant="contained"
+              size="small"
+              startIcon={<AddShoppingCartIcon />}
+              onClick={handleAddToCart}
+              sx={buttonStyle}
+            ></Button>
+          </Box>
         </Box>
       </CardContent>
     </Card>

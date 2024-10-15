@@ -19,6 +19,7 @@ import {
 } from './singleProductStyle.js';
 import PropTypes from 'prop-types';
 import { buttonStyle } from '../ProductCard/productCardStyle.js';
+import FavoriteButton from '../../UX/FavoriteButton.jsx';
 
 const TabPanel = ({ children, value, index, ...other }) => (
   <div
@@ -109,6 +110,7 @@ const SingleProduct = ({ product, isLoading, error }) => {
             onDecrease={() => setQuantity(Math.max(1, quantity - 1))}
           />
         </Box>
+        <FavoriteButton product={product} />
         <Button
           variant="contained"
           color="primary"

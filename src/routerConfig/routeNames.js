@@ -9,6 +9,7 @@ const routeNames = Object.freeze({
   mensClothing: "/category/men's clothing",
   womensClothing: "/category/women's clothing",
   shoppingCart: '/category/cart',
+  favorites: '/favorites',
 });
 
 export default routeNames;

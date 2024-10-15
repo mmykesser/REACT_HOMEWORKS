@@ -18,7 +18,9 @@ import {
   CheckoutButton,
   RemoveAllButton,
 } from './cartPageStyle';
-import QuantityControl from '../../UX/QuantityControl'; // Импортируем QuantityControl
+import QuantityControl from '../../UX/QuantityControl';
+import { useNavigate } from 'react-router-dom';
+import FavoriteButton from '../../UX/FavoriteButton.jsx';
 
 const CartPage = () => {
   const {
@@ -29,6 +31,13 @@ const CartPage = () => {
     handleClearCart,
   } = useShoppingCart();
   const { data: products, isLoading, error } = useGetAllProductsQuery();
+
+  const navigate = useNavigate();
+
+  const handleNavigateToProduct = (productId) => {
+    navigate(`/products/${productId}`);
+  };
+
   const getProductDetails = (productId) => {
     return products?.find((product) => product.id === productId) || {};
   };
@@ -86,18 +95,30 @@ const CartPage = () => {
                   <ProductImage
                     src={productDetails.image}
                     alt={productDetails.title}
+                    onClick={() => handleNavigateToProduct(item.id)}
                   />
                   <ProductDetails>
-                    <Typography variant="subtitle1">
+                    <Typography
+                      variant="subtitle1"
+                      onClick={() => handleNavigateToProduct(item.id)}
+                      style={{ cursor: 'pointer' }}
+                    >
                       {productDetails.title}
                     </Typography>
-                    <Typography variant="body2" color="text.secondary">
+                    <Typography
+                      variant="body2"
+                      color="text.secondary"
+                      onClick={() => handleNavigateToProduct(item.id)}
+                      style={{ cursor: 'pointer' }}
+                    >
                       Product Code: {item.id}
                     </Typography>
                     <Typography
                       variant="body2"
                       color="success.main"
                       sx={{ marginTop: 1 }}
+                      onClick={() => handleNavigateToProduct(item.id)}
+                      style={{ cursor: 'pointer' }}
                     >
                       In Stock
                     </Typography>

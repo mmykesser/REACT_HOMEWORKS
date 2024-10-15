@@ -30,6 +30,7 @@ export const ProductImage = styled('img')({
   height: 120,
   objectFit: 'contain',
   marginRight: 16,
+  cursor: 'pointer',
 });
 
 export const ProductDetails = styled(Box)({

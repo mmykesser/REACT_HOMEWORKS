@@ -29,9 +29,7 @@ const JeweleryPage = () => {
 
   if (isLoading) return <CircularProgress />;
   if (error)
-    return (
-      <Typography color="error">Произошла ошибка: {error.message}</Typography>
-    );
+    return <Typography color="error">Error: {error.message}</Typography>;
 
   return (
     <Box>

@@ -29,9 +29,7 @@ const WomensClothingPage = () => {
 
   if (isLoading) return <CircularProgress />;
   if (error)
-    return (
-      <Typography color="error">Произошла ошибка: {error.message}</Typography>
-    );
+    return <Typography color="error">Error: {error.message}</Typography>;
 
   return (
     <Box>
@@ -39,7 +37,7 @@ const WomensClothingPage = () => {
       <SearchBar />
       <Box sx={{ padding: 2 }}>
         <Typography variant="h4" component="h1" gutterBottom>
-          Women s clothing
+          Women&apos;s clothing
         </Typography>
         <Stack direction={{ xs: 'column', md: 'row' }} spacing={2}>
           <Box sx={{ width: { xs: '100%', md: '20%' } }}>
